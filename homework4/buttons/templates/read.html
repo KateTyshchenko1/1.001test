@@ -1,0 +1,25 @@
+<h1>Kates favorite authors</h1>
+<table border = 1 
+background="/static/books3.jpg">
+
+    {% for authors in list %}
+    <tr>
+      <td> {{authors[0]}} </td>
+      <td> {{authors[1]}} </td>
+      <td> {{authors[2]}} </td>      
+      <td> {{authors[3]}} </td>      
+      <td> {{authors[4]}} </td>
+      <td> 
+        <a href="/authors?author_id={{authors[0]}}&author_name={{authors[1]}}">
+            <img src="/static/edit.png" width="30"> 
+        </a>
+      </td>
+      <td> 
+        <a href="/delete?author_id={{authors[0]}}">
+            <img src="/static/delete.png" width="30"> 
+        </a>
+      </td>
+
+    </tr>
+    {% endfor %}
+  </table>
